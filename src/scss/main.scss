@@ -1,0 +1,40 @@
+$pageWidth: 1280px;
+$pageMd: 970px;
+$pageSm: 750px;
+$gutter: 30px;
+
+// Fonts
+$font-reg: Roboto-Regular, sans-serif;
+$font-med: Roboto-Medium, sans-serif;
+
+// Цвета
+$color-text-red: #e51d0b; // Пример
+
+// Misc
+$time: 0.3s; // Таймер для transition
+
+@import "base/mixins";
+@import "libs/_normalize";
+@import "libs/base";
+@import "libs/animate";
+
+@import 'components/animation';
+
+// @import ../../lib/sass/main
+
+// Компоненты
+
+@import "components/fonts";
+@import "components/typography";
+@import "components/layout";
+@import "components/buttons";
+@import "components/navigation";
+@import "components/tabs";
+@import "components/modal";
+@import "components/dropdown";
+
+// Страницы
+@import "components/header";
+@import "components/page";
+// @import "components/inner";
+@import "components/footer";
