@@ -1,10 +1,17 @@
 $RobotoReg: Roboto-Reg, sans-serif;
-
+$RobotoLight: Roboto-Thin, sans-serif;
 $RobotoLight: Roboto-Light, sans-serif;
 $RobotoBold: Roboto-Bold, sans-serif;
 $RobotoMedium: Roboto-Medium, sans-serif;
+$pfreminderpro: PFReminderProMed;
 
 
+@font-face {
+  font-family: 'PFReminderProMed';
+  src: url("../fonts/pfreminderpromed/PF Reminder Pro Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Roboto-Medium';
@@ -23,6 +30,13 @@ $RobotoMedium: Roboto-Medium, sans-serif;
 @font-face {
   font-family: 'Roboto-Light';
   src: url("../fonts/roboto/Roboto-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url("../fonts/roboto/Roboto-Thin.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

@@ -3,6 +3,7 @@
 	height: 117px;
 	@extend .flex;
 	color: white;
+  	border-bottom: 1px solid transparentize(#8aacc8, 0.8);
 
 	@include media(1200) {
 		margin-top: 15px;
@@ -43,7 +44,7 @@
 		    content: '';
 		    width: 1px;
 		    height: 30px;
-		    background: gray;
+		    background: #7299bb;
 		    // -webkit-transform: rotate(-124deg);
 		    // -ms-transform: rotate(-124deg);
 		    // transform: rotate(124deg);

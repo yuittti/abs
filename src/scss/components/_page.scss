@@ -1,0 +1,87 @@
+.info {
+  padding: 140px 0 100px 0;
+
+  .container {
+    @extend .flex;
+    align-items: stretch;
+  }
+
+  .txt {
+    margin: 20px 0 0;
+  }
+
+  .btn {
+    margin-top: 65px;
+  }
+
+  &-txt {
+
+  }
+
+  &-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    padding-left: 11.25%;
+
+    .block-bg {
+      width: 100%;
+      background: url(../images/block-bg.jpg) center center no-repeat;
+      background-size: cover;
+      position: relative;
+
+      & > img {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translatey(-50%);
+      }
+
+      .a-txt {
+        font-family: $pfreminderpro;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        color: #ffc750;
+        font-size: 19px;
+        transform: rotate(-13.5deg);
+        transform-origin: left bottom;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.scheme {
+  padding: 100px 0;
+  background: #fafafa;
+}
+
+.examples {
+  padding: 85px 0;
+
+  .block-title {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &-item {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 30px;
+
+    a {
+      display: flex;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

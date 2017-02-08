@@ -39,60 +39,6 @@
 
 
 	$(document).ready(function(){
-		$('#fullpage').fullpage({
-			menu: '#navigationBar',
-			afterLoad: function(anchorLink, index) {
-
-				if(anchorLink !== 'frame1'){
-					$('.navigationBar').removeClass('-hidden');
-				}
-				else {
-					$('.navigationBar').addClass('-hidden');
-				}
-				console.log($(this).find('._to_animate'));
-				//$(this).find('._to_animate').addClass('animated fadeInLeft');
-			}
-		});
-
-		// $.fn.fullpage.setAllowScrolling(true);
-
-		$(function() {
-			window.mobileDetection = {
-				Android: function () {
-					return navigator.userAgent.match(/Android/i);
-				},
-				BlackBerry: function () {
-					return navigator.userAgent.match(/BlackBerry/i);
-				},
-				iOS: function () {
-					return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-				},
-				Opera: function () {
-					return navigator.userAgent.match(/Opera Mini/i);
-				},
-				Windows: function () {
-					return navigator.userAgent.match(/IEMobile/i);
-				},
-				any: function () {
-					return this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows();
-				}
-			};
-
-			if ((window.mobileDetection.any())) {
-				$.fn.fullpage.setResponsive(true);
-				$.fn.fullpage.destroy('all');
-
-			}
-		});
-
-
-
-		$(window).load(function() {
-
-			//$('.twentytwenty-container').eq(0).twentytwenty().addClass('-loaded');
-			$('.twentytwenty-container').twentytwenty();
-
-		});
 
 		$('ul.tabs-caption').on('click', 'li > a', function(ev) {
 			ev.preventDefault();
@@ -107,32 +53,7 @@
 
 		});
 
-
-		$('.advantages-btns').on('click', '.advantages-btn', function(ev) {
-			ev.preventDefault();
-
-			var ind = $(this).index();
-			var self = $(this);
-
-			if ($(this).hasClass('-active')) {
-				return false;
-			}
-
-			$('.advantages-btns').removeClass().addClass('advantages-btns').addClass('rotate-' + ind);
-
-			$(this)
-				.siblings().removeClass('-active')
-				.closest('.advantages-list').find('.advantages-tab').removeClass('-active').eq($(this).index()).addClass('-active');
-
-			setTimeout(function(){
-				self.addClass('-active');
-			}, 150);
-
-			console.log(ind);
-		});
 	});
-
-	
 
 	initGMap(document.getElementById('map'));
 	

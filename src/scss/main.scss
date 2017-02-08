@@ -1,11 +1,17 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic,cyrillic-ext');
+$ubuntu: 'Ubuntu';
+$font-reg: Roboto-Regular, sans-serif;
+$font-med: Roboto-Medium, sans-serif;
+$font-light: Roboto-Light, sans-serif;
+$font-thin: Roboto-Thin, sans-serif;
+
+
 $pageWidth: 1280px;
 $pageMd: 970px;
 $pageSm: 750px;
 $gutter: 30px;
 
-// Fonts
-$font-reg: Roboto-Regular, sans-serif;
-$font-med: Roboto-Medium, sans-serif;
 
 // Цвета
 $color-text-red: #e51d0b; // Пример
@@ -14,6 +20,7 @@ $color-text-red: #e51d0b; // Пример
 $time: 0.3s; // Таймер для transition
 
 @import "base/mixins";
+@import "base/variables";
 @import "libs/_normalize";
 @import "libs/base";
 @import "libs/animate";
@@ -24,6 +31,7 @@ $time: 0.3s; // Таймер для transition
 
 // Компоненты
 
+@import "vendor/fontawesome/font-awesome";
 @import "components/fonts";
 @import "components/typography";
 @import "components/layout";

@@ -8,8 +8,9 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('rigger'),
     cssmin = require('gulp-minify-css'),
-    // imagemin = require('gulp-imagemin'),
-    // pngquant = require('imagemin-pngquant'),
+    imagemin = require('gulp-imagemin'),
+    imageminOptipng = require('imagemin-optipng'),
+    pngquant = require('imagemin-pngquant'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
     rimraf = require('rimraf'),
@@ -83,12 +84,12 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        //.pipe(imagemin({
-        //    progressive: true,
-        //    svgoPlugins: [{removeViewBox: false}],
-        //    use: [pngquant()],
-        //    interlaced: true
-        //}))
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant(), imageminOptipng()],
+            interlaced: true
+        }))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });

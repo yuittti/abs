@@ -1,68 +1,111 @@
 .header {
-	// height: 100%;
-	height: 650px;
-	background: url(../images/header-bg.jpg) center top no-repeat;
-	// background-size: cover;
+  // height: 100%;
+  height: 650px;
+  background: url(../images/header-bg.jpg) center top no-repeat;
+  background-size: cover;
 
 
+  .container {
+	display: flex;
+	flex-direction: column;
+    height: inherit;
+  }
 
-	&-txt {
-		margin-top: 85px;
+  &-txt {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
 
-	    display: flex;
-	    width: 100%;
-	    flex-direction: column;
-	    align-items: center;
-	    text-align: center;
+    .page-title {
+      display: block;
+      margin-bottom: 20px;
+    }
 
-	    @include hmedia(768) {
-			margin-top: 55px;
-		}
+    .page-subtitle {
+      display: block;
+      padding-right: 30%;
+    }
 
-		@include media(1385) {
-			margin-top: 55px;
-		}
-		@include media(550) {
-			margin-top: 35px;
-		}
+    .callback {
+      font-size: 25px;
+      color: white;
+      font-weight: 400;
+      margin-bottom: 5px;
 
-	    .page-title {
-	    	margin-bottom: 20px;
-	    }
+      @include media(767) {
+          font-size: 20px;
+      }
+    }
 
-	    .callback {
-	    	
-			font-size: 25px;
-			color: white;
-			font-weight: 400;
-			margin-bottom: 5px;
+    .phone-num {
+      font-weight: 600;
+      font-size: 45px;
+      color: white;
+      margin-bottom: 10px;
 
-			@include media(767) {
-				font-size: 20px;
-			}
-	    }
+      @include media(767) {
+          font-size: 35px;
+      }
+      @include media(550) {
+          font-size: 30px;
+      }
+    }
 
-	    .phone-num {
-	    	
-	    	font-weight: 600;
-	    	font-size: 45px;
-	    	color: white;
-	    	margin-bottom: 10px;
+    .btn-lg {
+      margin-top: 40px;
 
-	    	@include media(767) {
-				font-size: 35px;
-			}
-	    	@include media(550) {
-				font-size: 30px;
-			}
-	    }
+      @include media(550) {
+          margin-top: 30px;
+      }
+    }
+  }
 
-	    .btn-lg {
-	    	margin-top: 40px;
+  &-left {
+    display: flex;
+    flex-direction: column;
+  }
 
-	    	@include media(550) {
-	    		margin-top: 30px;
-	    	}
-	    }
-	}
+  &-right {
+    position: absolute;
+    right: -35px;
+    bottom: -140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-md {
+    background: rgba(0, 0, 0, 0.15);
+    margin-top: 70px;
+
+    &:hover {
+      background: #307ac6;
+    }
+  }
+
+  .btn-txt {
+
+    font-family: $ubuntu;
+    font-size: 13px;
+    align-self: flex-start;
+    background: transparent;
+    height: auto;
+    margin-top: 28px;
+    margin-left: 45px;
+    padding-left: 27px;
+    position: relative;
+
+    &:before {
+      content: '\f144';
+      display: block;
+      font-family: FontAwesome;
+      position: absolute;
+      left: 0;
+      text-align: center;
+      font-size: 16px;
+      color: white;
+    }
+  }
 }
